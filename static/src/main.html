@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/main.css" rel="stylesheet">
+    <title>Weather</title>
+</head>
+<body>
+
+<header>
+    <h1>Погода здесь</h1>
+    <button id="update-desktop-version" class="update-button">Обновить геолокацию</button>
+    <button id="update-mobile-version" class="update-button"><img src="../icons/update-icon.svg" alt="update-icon"></button>
+</header>
+
+<main class="grid-container">
+    <div id="here-city-update-info" class="update-info">
+        <p>Подождите, данные загружаются</p>
+        <button class="update-button"><img src="../icons/update-icon.svg" alt="update-icon"></button>
+    </div>
+
+    <div class="grid-section weather-here-main-info">
+        <h2>Saint Petersburg</h2>
+        <img id="main-city-weather-icon" class="weather-icon" src="" alt="Иконка погоды">
+        <span class="main-temperature temperature">8&deg;С</span>
+    </div>
+    <ul class="grid-section weather-here-characteristics weather-characteristics">
+        <li>Ветер<span class="weather-characteristic-value">Moderate breeze, 6.0 m/s, North-northwest</span></li>
+        <li>Облачность<span class="weather-characteristic-value">Broken clouds</span></li>
+        <li>Давление<span class="weather-characteristic-value">1013 hpa</span></li>
+        <li>Влажность<span class="weather-characteristic-value">52 %</span></li>
+        <li>Координаты<span class="weather-characteristic-value">[59.88, 30.42]</span></li>
+    </ul>
+
+    <h2 class="grid-section favorite-header">Избранное</h2>
+    <div class="grid-section add-new-city-form">
+        <form id="add-new-city">
+            <label for="new-city"></label>
+            <input class="input-field" id="new-city" type="text" placeholder="Добавить новый город">
+            <input class="button" type="submit" value="+">
+        </form>
+    </div>
+
+    <ul id="favorite-list">
+        <li id="example" class="grid-section">
+            <div class="favorite-header">
+                <h3>Moscow</h3>
+                <span class="temperature">5&deg;C</span>
+                <img class="weather-icon" src="" alt="Иконка погоды">
+                <button class="delete-button button">+</button>
+            </div>
+            <ul class="weather-characteristics">
+                <li>Ветер<span class="weather-characteristic-value">Moderate breeze, 6.0 m/s, North-northwest</span></li>
+                <li>Облачность<span class="weather-characteristic-value">Broken clouds</span></li>
+                <li>Давление<span class="weather-characteristic-value">1013 hpa</span></li>
+                <li>Влажность<span class="weather-characteristic-value">52 %</span></li>
+                <li>Координаты<span class="weather-characteristic-value">[59.88, 30.42]</span></li>
+            </ul>
+        </li>
+    </ul>
+
+</main>
+
+<script src="js/clientserver.js"></script>
+
+</body>
+</html>

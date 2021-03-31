@@ -19,6 +19,10 @@ app.use(cors()); // needed to get request from localhost
 app.use(express.static('static'));
 
 
+app.get('/', (req, res) => {
+    res.redirect('/src/main.html');
+});
+
 app.get('/weather/city', (req, res) => {
     const city = req.query.q;
     fetch(urls.getByCity(city))
@@ -35,7 +39,7 @@ app.get('/weather/coordinates', (req, res) => {
     fetch(urls.getByCoords(coords))
         .then(response => response.json())
         .then(json => res.json(weather.parse(json)))
-        .catch(() => res.status(404).json({ error: 'City not found' }));
+        .catch(() => res.status(404).send('City not found'));
 });
 
 app.get('/favorites', (req, res) => {
