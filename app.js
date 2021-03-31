@@ -35,7 +35,7 @@ app.get('/weather/coordinates', (req, res) => {
     fetch(urls.getByCoords(coords))
         .then(response => response.json())
         .then(json => res.json(weather.parse(json)))
-        .catch(() => res.status(404).send('City not found'));
+        .catch(() => res.status(404).json({ error: 'City not found' }));
 });
 
 app.get('/favorites', (req, res) => {
@@ -52,8 +52,10 @@ app.post('/favorites', (req, res) => {
 });
 
 app.delete('/favorites', (req, res) => {
-    // TODO delete favorite from db
-    const city = req.query.q;
+    const id = req.query.id;
+    pool.query('DELETE FROM favorites WHERE id = $1 RETURNING *', [id])
+        .then(result => res.json(result.rows[0]))
+        .catch(() => res.sendStatus(500));
 });
 
 app.listen(port, () => {

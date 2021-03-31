@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e5947a1-872b-49cb-841a-4ac0cbc213c4" name="Default Changelist" comment="" />
+    <list default="true" id="5e5947a1-872b-49cb-841a-4ac0cbc213c4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,6 +76,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1qTpChpI2fegTtibuDvdrvbRn9k" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -80,6 +88,7 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.13.1" />
@@ -89,7 +98,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="SvnConfiguration">
@@ -108,6 +117,8 @@
       <workItem from="1617176427541" duration="1103000" />
       <workItem from="1617177586400" duration="15028000" />
       <workItem from="1617208415568" duration="1171000" />
+      <workItem from="1617209923248" duration="1082000" />
+      <workItem from="1617217875976" duration="1544000" />
     </task>
     <servers />
   </component>
@@ -123,6 +134,10 @@
       <screen x="0" y="0" width="1218" height="720" />
     </state>
     <state x="65" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1218.720@0.0.1218.720" timestamp="1617205010250" />
+    <state x="220" y="59" key="CommitChangelistDialog2" timestamp="1617210011311">
+      <screen x="0" y="0" width="1218" height="720" />
+    </state>
+    <state x="220" y="59" key="CommitChangelistDialog2/0.0.1218.720@0.0.1218.720" timestamp="1617210011311" />
     <state width="1175" height="176" key="GridCell.Tab.0.bottom" timestamp="1617186528347">
       <screen x="0" y="0" width="1218" height="720" />
     </state>
@@ -139,14 +154,18 @@
       <screen x="0" y="0" width="1218" height="720" />
     </state>
     <state width="1175" height="176" key="GridCell.Tab.0.right/0.0.1218.720@0.0.1218.720" timestamp="1617186528346" />
+    <state x="113" y="6" key="SettingsEditor" timestamp="1617217898750">
+      <screen x="0" y="0" width="1218" height="720" />
+    </state>
+    <state x="113" y="6" key="SettingsEditor/0.0.1218.720@0.0.1218.720" timestamp="1617217898750" />
     <state x="340" y="169" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1617142115768">
       <screen x="0" y="0" width="1218" height="720" />
     </state>
     <state x="340" y="169" key="com.intellij.database.dbimport.ImportUtil.MyDialog/0.0.1218.720@0.0.1218.720" timestamp="1617142115768" />
-    <state x="318" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1617176428982">
+    <state x="318" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1617217875864">
       <screen x="0" y="0" width="1218" height="720" />
     </state>
-    <state x="318" y="189" key="com.intellij.ide.util.TipDialog/0.0.1218.720@0.0.1218.720" timestamp="1617176428982" />
+    <state x="318" y="189" key="com.intellij.ide.util.TipDialog/0.0.1218.720@0.0.1218.720" timestamp="1617217875864" />
     <state x="266" y="161" key="run.anything.popup" timestamp="1617203465988">
       <screen x="0" y="0" width="1218" height="720" />
     </state>
