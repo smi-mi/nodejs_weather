@@ -126,8 +126,8 @@ function removeFavorite() {
 // adding favorite to DOM
 const FAVORITE_LIST_NODE = document.getElementById(FAVORITE_LIST_ID);
 function addFavorite() {
-    let favorite = document.getElementById(FAVORITE_EXAMPLE_ID).cloneNode(true);
-    favorite.setAttribute('id', '');
+    let example = document.getElementById(FAVORITE_EXAMPLE_ID);
+    let favorite = example.content.firstElementChild.cloneNode(true);
     favorite.style.visibility = 'hidden';
     favorite.firstElementChild.lastElementChild.addEventListener('click', removeFavorite);
     let update_info = updateInfo.cloneNode(true);
