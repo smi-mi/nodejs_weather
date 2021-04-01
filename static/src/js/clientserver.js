@@ -103,8 +103,8 @@ function fillHereCity(json) {
     fillCharacteristics(characteristics.children, json.characteristics);
     characteristics.style.visibility = 'visible';
 }
-function fillFavorite(json, id) {
-    let favorite = document.getElementById(id);
+function fillFavorite(info, json, favorite) {
+    favorite.setAttribute('id', info.id);
     favorite.firstElementChild.remove();
     let header = favorite.firstElementChild.children;
     header[0].textContent = json.name;
@@ -116,6 +116,7 @@ function fillFavorite(json, id) {
 
 // remove favorite button
 function removeFavorite() {
+    this.disabled = true;
     let favorite = this.parentElement.parentElement;
     fetch(deleteFavoriteUrl(favorite.getAttribute('id')),{ method: 'DELETE' })
         .then(() => favorite.remove())
@@ -123,32 +124,47 @@ function removeFavorite() {
 }
 
 // adding favorite to DOM
-function addFavorite(f) {
+const FAVORITE_LIST_NODE = document.getElementById(FAVORITE_LIST_ID);
+function addFavorite() {
     let favorite = document.getElementById(FAVORITE_EXAMPLE_ID).cloneNode(true);
-    favorite.setAttribute('id', f.id);
+    favorite.setAttribute('id', '');
     favorite.style.visibility = 'hidden';
-    favorite.firstElementChild.lastElementChild.onclick = removeFavorite;
+    favorite.firstElementChild.lastElementChild.addEventListener('click', removeFavorite);
     let update_info = updateInfo.cloneNode(true);
     update_info.setAttribute('id', '');
+    update_info.style.visibility = 'visible';
     update_info.classList.add(UPDATE_INFO_FAVORITE_CLASS);
     favorite.prepend(update_info);
     FAVORITE_LIST_NODE.append(favorite);
+    return favorite;
 }
 
 // add favorite button with checking city validness
-document.getElementById(ADD_FAVORITE_FORM_ID).onsubmit = function () {
-    let city = document.getElementById(NEW_CITY_ID).value;
+document.getElementById(ADD_FAVORITE_FORM_ID).addEventListener('submit', (event) => {
+    event.preventDefault();
+    let newCityField = document.getElementById(NEW_CITY_ID);
+    let city = newCityField.value;
+    newCityField.value = '';
     if (!checkCity(city)) {
         alert('Несуществующий город: ' + city);
         return;
     }
+    let favorite = addFavorite();
+    let info;
     fetch(addFavoriteUrl(city), { method: 'POST' })
-        .catch(error => alert(error));
-};
+        .then(response => response.json())
+        .then(json => {
+            info = json;
+            return fetch(weatherByCityURL(info.city));
+        })
+        .then(response => response.json())
+        .then(json => fillFavorite(info, json, favorite))
+        .catch(() => favorite.remove());
+});
 
 // update buttons
 for (let b of document.getElementsByClassName(UPDATE_BUTTON_CLASS)) {
-    b.onclick = updateGeolocation;
+    b.addEventListener('click', updateGeolocation);
 }
 
 // hiding here-city info
@@ -158,21 +174,6 @@ let mainInfo = document.getElementsByClassName(HERE_CITY_MAIN_ID)[0];
 let characteristics = document.getElementsByClassName(HERE_CITY_CHARACTERISTICS_ID)[0];
 mainInfo.style.visibility = 'hidden';
 characteristics.style.visibility = 'hidden';
-
-// updating favorites
-const FAVORITE_LIST_NODE = document.getElementById(FAVORITE_LIST_ID);
-fetch(favoritesUrl())
-    .then(response => response.json())
-    .then(favorites => {
-        for (const f of favorites) {
-            addFavorite(f);
-            fetch(weatherByCityURL(f.city))
-                .then(res => res.json())
-                .then(json => fillFavorite(json, f.id))
-                .catch(error => alert(error));
-        }
-    })
-    .catch(error => alert(error));
 
 // getting weather for here-city
 if (localStorage.getItem(HERE_CITY) !== null) {
@@ -188,3 +189,18 @@ if (localStorage.getItem(HERE_CITY) !== null) {
         .then(json => fillHereCity(json))
         .catch(error => alert(error));
 }
+
+// updating favorites
+fetch(favoritesUrl())
+    .then(response => response.json())
+    .then(favorites => {
+        for (const f of favorites) {
+            let favorite = addFavorite();
+            console.log(favorite);
+            fetch(weatherByCityURL(f.city))
+                .then(res => res.json())
+                .then(json => fillFavorite(f, json, favorite))
+                .catch(error => alert(error));
+        }
+    })
+    .catch(error => alert(error));

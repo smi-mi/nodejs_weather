@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e5947a1-872b-49cb-841a-4ac0cbc213c4" name="Default Changelist" comment="added frontend and redirection to html page">
-      <change afterPath="$PROJECT_DIR$/static/icons/update-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/src/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/src/js/clientserver.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/src/main.html" afterDir="false" />
+    <list default="true" id="5e5947a1-872b-49cb-841a-4ac0cbc213c4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/src/js/clientserver.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/src/js/clientserver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/src/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/src/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +123,10 @@
       <workItem from="1617177586400" duration="15028000" />
       <workItem from="1617208415568" duration="1171000" />
       <workItem from="1617209923248" duration="1082000" />
-      <workItem from="1617217875976" duration="10344000" />
+      <workItem from="1617217875976" duration="10409000" />
+      <workItem from="1617254807085" duration="4911000" />
+      <workItem from="1617305362880" duration="131000" />
+      <workItem from="1617312687189" duration="2557000" />
     </task>
     <task id="LOCAL-00001" summary="done">
       <created>1617220001597</created>
@@ -135,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617220001597</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added frontend and redirection to html page">
+      <created>1617233602278</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1617233602278</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,10 +162,10 @@
       <screen x="0" y="0" width="1218" height="720" />
     </state>
     <state x="65" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1218.720@0.0.1218.720" timestamp="1617205010250" />
-    <state x="220" y="59" key="CommitChangelistDialog2" timestamp="1617233589967">
+    <state x="220" y="59" key="CommitChangelistDialog2" timestamp="1617315255992">
       <screen x="0" y="0" width="1218" height="720" />
     </state>
-    <state x="220" y="59" key="CommitChangelistDialog2/0.0.1218.720@0.0.1218.720" timestamp="1617233589967" />
+    <state x="220" y="59" key="CommitChangelistDialog2/0.0.1218.720@0.0.1218.720" timestamp="1617315255992" />
     <state width="1175" height="176" key="GridCell.Tab.0.bottom" timestamp="1617186528347">
       <screen x="0" y="0" width="1218" height="720" />
     </state>
@@ -179,14 +186,18 @@
       <screen x="0" y="0" width="1218" height="720" />
     </state>
     <state x="113" y="6" key="SettingsEditor/0.0.1218.720@0.0.1218.720" timestamp="1617217898750" />
+    <state x="202" y="94" key="Vcs.Push.Dialog.v2" timestamp="1617233654072">
+      <screen x="0" y="0" width="1218" height="720" />
+    </state>
+    <state x="202" y="94" key="Vcs.Push.Dialog.v2/0.0.1218.720@0.0.1218.720" timestamp="1617233654072" />
     <state x="340" y="169" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1617142115768">
       <screen x="0" y="0" width="1218" height="720" />
     </state>
     <state x="340" y="169" key="com.intellij.database.dbimport.ImportUtil.MyDialog/0.0.1218.720@0.0.1218.720" timestamp="1617142115768" />
-    <state x="318" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1617217875864">
+    <state x="318" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1617305459149">
       <screen x="0" y="0" width="1218" height="720" />
     </state>
-    <state x="318" y="189" key="com.intellij.ide.util.TipDialog/0.0.1218.720@0.0.1218.720" timestamp="1617217875864" />
+    <state x="318" y="189" key="com.intellij.ide.util.TipDialog/0.0.1218.720@0.0.1218.720" timestamp="1617305459149" />
     <state x="266" y="161" key="run.anything.popup" timestamp="1617203465988">
       <screen x="0" y="0" width="1218" height="720" />
     </state>
